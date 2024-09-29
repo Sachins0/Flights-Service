@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         defaultValue:0,
         validate:{
-        max:200
+        max:1000
       }
       },
       createdAt: {

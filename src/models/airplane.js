@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       defaultValue:0,
       validate:{
-        max:200
+        max:1000
       }
     }
   }, {
