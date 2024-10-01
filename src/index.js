@@ -1,7 +1,7 @@
 const express=require('express')
 
 const {ServerConfig}= require('./config')
-const apiRoutes= require('./routes')
+const apiRoutes= require('./routes');
 
 const app=express()
 
