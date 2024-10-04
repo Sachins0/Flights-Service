@@ -29,6 +29,7 @@ module.exports = {
         model: 'Airports',
         key: 'code'
       },
+      onDelete: 'CASCADE'
       },
       arrivalAirportId: {
         type: Sequelize.STRING,
