@@ -85,7 +85,20 @@ function validateUpdateRequest(req,res,next){
     next();
 }
 
+function validateUpdateSeatRequest(req,res,next){
+    if(!req.body.seats){
+        ErrorResponse.message='Error while updating the flight';
+        ErrorResponse.error= new AppError({explanation : 'TotalSeats is not found in incoming req'},StatusCodes.BAD_REQUEST);
+        return res
+                .status(StatusCodes.BAD_REQUEST)
+                .json(ErrorResponse)
+    }
+
+    next();
+}
+
 module.exports={
     validateCreateRequest,
-    validateUpdateRequest
+    validateUpdateRequest,
+    validateUpdateSeatRequest
 }
